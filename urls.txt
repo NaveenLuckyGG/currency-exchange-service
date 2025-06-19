@@ -5,4 +5,19 @@ http://localhost:8000/currency-exchange/from/USD/to/INR
    "to":"INR",
    "conversionMultiple":65.00,
    "environment":"8000 instance-id"
+   
+   Note : If we want run currency-exchange application comment below lines of code 
+   and related dependency's need to remove.
+   
+   # Spring boot admin server 
+spring.boot.admin.client.url=http://localhost:8093
+
+# Actuator endpoints properties
+management.endpoints.web.exposure.include=*
+management.endpoint.health.show-details=always
+
+# To monitor log file on admin server
+logging.file.name=demo_api.log
+logging.logback.rollingpolicy.max-history=5
+logging.logback.rollingpolicy.max-file-size=10MB
 }
